@@ -160,3 +160,58 @@ minikube service locomoco-song-service -n local-mobile
 ```
 
 以上
+
+
+
+
+---
+初回だけ、helmをインストールして、harborのリポジトリを追加する
+brew install helm
+helm repo add harbor https://helm.goharbor.io
+
+minikube start
+kubectl config get-contexts
+
+kubectl create namespace local-harbor-system
+kubectl config set-context minikube --namespace=local-harbor-system
+kubectl config get-contexts
+
+kubectl get node -o wide
+
+上記で確認したInternal-IPを、以下のコマンドに埋め込んで実行する
+
+helm install harbor --namespace local-harbor-system harbor/harbor \
+  --set expose.type=nodePort \
+  --set expose.tls.enabled=false \
+  --set persistence.enabled=false \
+  --set externalURL=http://[Internal-IP]:30002 \
+  --set harborAdminPassword=password      VMware1!
+
+kubectl get pods
+
+harbor用のpodたちが起動するまで数分待つ。
+
+https://blog.vpantry.net/2020/02/harbor-helm-install/
+
+外からアクセスできるようにする
+
+minikube addons enable ingress
+
+kubectl get pods -n kube-system
+
+https://kubernetes.io/ja/docs/tasks/access-application-cluster/ingress-minikube/
+
+kubectl apply -f harbor/ingress/ingress-gateway.yml
+
+minikube ip
+
+sudo vi /etc/hosts
+以下を追記
+```
+192.168.99.107 local.horbor.dev
+```
+
+http://local.horbor.dev
+
+でharborにアクセス可能。
+chromeだと勝手にhttpsになってしまってエラーになるかも。
