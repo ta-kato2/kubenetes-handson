@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: API
+  name: locomoco-song-pod
+  namespace: local-mobile
+spec:
+  containers:
+  - name: locomoco-song-container
+    image: nginx:latest 

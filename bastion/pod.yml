@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bastion
+  namespace: local-mobile
+spec:
+  containers:
+  - name: bastion
+    image: debian:stretch
+    command: ["sleep", "infinity"]

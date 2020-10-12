@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: API
+  name: locomoco-song-service
+  namespace: local-mobile
+spec:
+  selector: 
+    component: locomoco-song-pod
+  ports:
+  - name: http-port
+    protocol: TCP
+    port: 80
+    targetPort: 80
+  type: NodePort

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: locomoco-song-deployment
+  namespace: local-mobile
+  labels:
+    app: API
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: locomoco-song-pod
+  template:
+    metadata:
+      labels:
+        component: locomoco-song-pod
+    spec:
+      containers:
+      - name: locomoco-song-container
+        image: nginx:latest
