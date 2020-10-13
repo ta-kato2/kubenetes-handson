@@ -42,13 +42,14 @@ minikube delete
 
 改めてminikubeを起動する。
 ```
-minikube start --vm-driver=virtualbox
+minikube start --vm-driver=virtualbox --insecure-registry local.harbor.dev:80
 ```
 
 以下のアドオンを追加する。（Ingressの作成やharborに必要）
 ```
 minikube addons enable ingress
 minikube addons enable default-storageclass
+minikube addons enable registry
 ```
 
 ### minikubeのダッシュボードを開く
@@ -311,3 +312,10 @@ chromeだと勝手にhttpsになってしまってエラーになるかも。
 
  docker login local.harbor.dev:80 --username admin
  docker push local.harbor.dev:80/mobile/locomoco-song:latest
+
+以下をJSONの項目に追記して、Docker For Macを再起動する。これをやると、指定したリポジトリはHTTPSじゃなくHTTPでも通るようになる。
+vi ~/.docker/daemon.json
+  "insecure-registries":["local.harbor.dev:80"]
+
+
+

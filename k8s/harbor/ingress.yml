@@ -2,8 +2,9 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: harbor-ingress-gateway
+  namespace: local-harbor
   annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: "0" // harborへPUSHする際に、IngressのNginxから、サイズデカすぎ413エラーが返らないようにするために設定
+    nginx.ingress.kubernetes.io/proxy-body-size: "0" # harborへPUSHする際に、IngressのNginxから、サイズデカすぎ413エラーが返らないようにするために設定
 spec:
   rules:
   - host: local.harbor.dev

@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: local-mogile-ingress-gateway
+  namespace: local-mobile
 spec:
   rules:
     - host: local.mobile.dev
@@ -10,4 +11,4 @@ spec:
           - path: /locomoco-song
             backend:
               serviceName: locomoco-song-service
-              servicePort: 80
+              servicePort: 8080
