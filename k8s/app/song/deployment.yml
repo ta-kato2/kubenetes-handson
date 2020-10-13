@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
       - name: locomoco-song-container
-        image: nginx:latest
+        image: local.mobile.dev/locomoco-song:latest
