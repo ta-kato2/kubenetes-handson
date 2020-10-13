@@ -172,15 +172,15 @@ helm repo add harbor https://helm.goharbor.io
 minikube start
 kubectl config get-contexts
 
-kubectl create namespace local-harbor-system
-kubectl config set-context minikube --namespace=local-harbor-system
+kubectl create namespace local-harbor
+kubectl config set-context minikube --namespace=local-harbor
 kubectl config get-contexts
 
 kubectl get node -o wide
 
 上記で確認したInternal-IPを、以下のコマンドに埋め込んで実行する
 
-helm install harbor --namespace local-harbor-system harbor/harbor \
+helm install harbor --namespace local-harbor harbor/harbor \
   --set expose.type=nodePort \
   --set expose.tls.enabled=false \
   --set persistence.enabled=false \
