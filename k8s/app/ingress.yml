@@ -12,3 +12,7 @@ spec:
             backend:
               serviceName: locomoco-song-service
               servicePort: 8080
+          - path: /locomoco-dance
+            backend:
+              serviceName: locomoco-dance-service
+              servicePort: 8080

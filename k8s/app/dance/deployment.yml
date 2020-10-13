@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: locomoco-dance-deployment
+  namespace: local-mobile
+  labels:
+    app: API
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: locomoco-dance-pod
+  template:
+    metadata:
+      labels:
+        component: locomoco-dance-pod
+    spec:
+      containers:
+      - name: locomoco-dance-container
+        image: local.harbor.dev:80/mobile/locomoco-dance:latest
