@@ -45,9 +45,10 @@ minikube delete
 minikube start --vm-driver=virtualbox
 ```
 
-以下のアドオンを追加する。（Ingressの作成に必要）
+以下のアドオンを追加する。（Ingressの作成やharborに必要）
 ```
 minikube addons enable ingress
+minikube addons enable default-storageclass
 ```
 
 ### minikubeのダッシュボードを開く
@@ -59,10 +60,18 @@ minikube dashboard
 ```
 
 ## ハンズオン用に新しくネームスペースを作成する
+
+
 元のターミナルに戻って、「local-mobile」というネームスペースを作成する。
 
+まずは現在、minikubeを向いていることを確認し、
 ```
-kubectl apply -f app/namespace.yml
+kubectl config get-contexts
+```
+
+以下のコマンドで新規にネームスペースを作成します。
+```
+kubectl apply -f k8s/app/namespace.yml
 ```
 
 現在のネームスペースを確認する
@@ -119,7 +128,7 @@ exit
 ## LocoMoco Songモジュールを作成する（お試しで、直接podを１つ作成する）
 次に、locomoco-songのpodを１つ作成する
 ```
-kubectl apply -f app/song/pod.yml
+kubectl apply -f k8s/app/song/pod.yml
 ```
 
 作成されているか以下のコマンドか、ダッシュボードで確認する。IPアドレスも確認する。
@@ -145,14 +154,14 @@ deploymentを使うと、常に指定した台数のpodが起動するように�
 作成したpodを削除する。
 
 ```
-kubectl delete -f app/song/pod.yml
+kubectl delete -f k8s/app/song/pod.yml
 ```
 
 ## LocoMoco Songのデプロイメントを作成して、モジュールを作成する（今度はちゃんとdeploymentからpodを作成する）
 
 2台のlocomoco-songをデプロイする設定を適用する。
 ```
-kubectl apply -f app/song/deployment.yml
+kubectl apply -f k8s/app/song/deployment.yml
 ```
 
 以下のコマンドか、ダッシュボードで2台のpodが出来ていることを確認する。
@@ -187,7 +196,7 @@ replicasの値を 2 -> 4 に編集してみる。
 そして変更を適用してみる。
 
 ```
-kubectl apply -f app/song/deployment.yml
+kubectl apply -f k8s/app/song/deployment.yml
 ```
 
 以下のコマンドかダッシュボードで確認すると、4台に増えていることが確認できる。
@@ -204,7 +213,7 @@ kubectl get pod
 今度は、この2台のlocomoco-songのどちらかに、アクセスできるように、前段にロードバランサーを作成する。
 kubenetesでは、serviceと呼ぶ。（正確にはロードバランサーではない）
 ```
-kubectl apply -f app/song/service.yml
+kubectl apply -f k8s/app/song/service.yml
 ```
 
 踏み台サーバーから、serviceへcurlを叩いてみて、その先のlocomoco-songへ通信されることを確認する。
@@ -247,7 +256,7 @@ local.mobile.dev minikubeのIPアドレス
 以下のコマンドでingressを作成する。
 
 ```
-kubectl apply -f app/song/ingress.yml
+kubectl apply -f k8s/app/song/ingress.yml
 ```
 
 このingressには、`http://local.mobile.dev/locomoco-song` でアクセスを受けると、
@@ -263,7 +272,7 @@ kubectl apply -f app/song/ingress.yml
 
 
 ---
-kubectl create namespace local-harbor
+kubectl apply -f k8s/harbor/namespace.yml
 kubectl config set-context minikube --namespace=local-harbor
 kubectl config get-contexts
 
@@ -274,35 +283,31 @@ kubectl get node -o wide
 helm install harbor --namespace local-harbor harbor/harbor \
   --set expose.type=nodePort \
   --set expose.tls.enabled=false \
-  --set persistence.enabled=false \
+  --set persistence.enabled=true \
   --set externalURL=http://[Internal-IP]:30002 \
-  --set harborAdminPassword=password      VMware1!
+  --set harborAdminPassword=Password1!
 
 kubectl get pods
 
 harbor用のpodたちが起動するまで数分待つ。
 
-https://blog.vpantry.net/2020/02/harbor-helm-install/
-
 外からアクセスできるようにする
-
-minikube addons enable ingress
-
-kubectl get pods -n kube-system
-
-https://kubernetes.io/ja/docs/tasks/access-application-cluster/ingress-minikube/
-
-kubectl apply -f harbor/ingress/ingress-gateway.yml
+kubectl apply -f k8s/harbor/ingress.yml
 
 minikube ip
 
 sudo vi /etc/hosts
 以下を追記
 ```
-192.168.99.107 local.horbor.dev
+minikubeのIPアドレス local.harbor.dev
 ```
 
-http://local.horbor.dev
+http://local.harbor.dev
 
 でharborにアクセス可能。
 chromeだと勝手にhttpsになってしまってエラーになるかも。
+
+
+
+ docker login local.harbor.dev:80 --username admin
+ docker push local.harbor.dev:80/mobile/locomoco-song:latest

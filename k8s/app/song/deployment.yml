@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
       - name: locomoco-song-container
-        image: local.mobile.dev/locomoco-song:latest
+        image: local.harbor.dev/mobile/locomoco-song:latest
