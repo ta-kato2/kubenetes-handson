@@ -1,0 +1,3457 @@
+{
+  "actionDocMetaList": [
+    {
+      "url": "/root/",
+      "typeName": "dev.mobile.local.app.web.RootAction",
+      "simpleTypeName": "RootAction",
+      "description": "@author jflute",
+      "typeComment": "@author jflute\n@author iwamatsu0430",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "docksideLoginAssist",
+          "publicName": "docksideLoginAssist",
+          "typeName": "dev.mobile.local.app.web.base.login.SongLoginAssist",
+          "simpleTypeName": "SongLoginAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute\n@author black-trooper",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "index",
+      "methodComment": null,
+      "annotationList": [
+        "AllowAnyoneAccess",
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.lang.Void\u003e",
+        "simpleTypeName": "JsonResponse\u003cVoid\u003e",
+        "value": "JsonResponse.asEmptyBody()",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 16,
+      "methodLineCount": 4
+    },
+    {
+      "url": "/root/signout",
+      "typeName": "dev.mobile.local.app.web.RootAction",
+      "simpleTypeName": "RootAction",
+      "description": "@author jflute",
+      "typeComment": "@author jflute\n@author iwamatsu0430",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "docksideLoginAssist",
+          "publicName": "docksideLoginAssist",
+          "typeName": "dev.mobile.local.app.web.base.login.SongLoginAssist",
+          "simpleTypeName": "SongLoginAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute\n@author black-trooper",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "signout",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.lang.Void\u003e",
+        "simpleTypeName": "JsonResponse\u003cVoid\u003e",
+        "value": "JsonResponse.asEmptyBody()",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 16,
+      "methodLineCount": 4
+    },
+    {
+      "url": "/following/follow",
+      "typeName": "dev.mobile.local.app.web.following.FollowingAction",
+      "simpleTypeName": "FollowingAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute",
+      "fieldTypeDocMetaList": [],
+      "methodName": "follow",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "dev.mobile.local.app.web.following.FollowingBody",
+        "simpleTypeName": "FollowingBody",
+        "value": null,
+        "description": "@author iwamatsu0430",
+        "comment": "@author iwamatsu0430\n@author jflute",
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "yourMemberId",
+            "publicName": "yourMemberId",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.lang.Void\u003e",
+        "simpleTypeName": "JsonResponse\u003cVoid\u003e",
+        "value": null,
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 9,
+      "methodLineCount": 3
+    },
+    {
+      "url": "/member/info",
+      "typeName": "dev.mobile.local.app.web.member.MemberAction",
+      "simpleTypeName": "MemberAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "info",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cdev.mobile.local.app.web.member.MemberInfoResult\u003e",
+        "simpleTypeName": "JsonResponse\u003cMemberInfoResult\u003e",
+        "value": "asJson(result)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "memberId",
+            "publicName": "memberId",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberName",
+            "publicName": "memberName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberStatusName",
+            "publicName": "memberStatusName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "fileLineCount": 47,
+      "methodLineCount": 11
+    },
+    {
+      "url": "/member/status",
+      "typeName": "dev.mobile.local.app.web.member.MemberAction",
+      "simpleTypeName": "MemberAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "status",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.util.List\u003cjava.util.AbstractMap.java.util.AbstractMap$SimpleEntry\u003cjava.lang.String, java.lang.String\u003e\u003e\u003e",
+        "simpleTypeName": "JsonResponse\u003cList\u003cAbstractMAbstractMap$SimpleEntry\u003cString, String\u003e\u003e\u003e",
+        "value": "new SimpleEntry\u003c\u003e(m.code(),asJson(memberStatusList)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "key",
+            "publicName": "key",
+            "typeName": "java.lang.Object",
+            "simpleTypeName": "Object",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "value",
+            "publicName": "value",
+            "typeName": "java.lang.Object",
+            "simpleTypeName": "Object",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "fileLineCount": 47,
+      "methodLineCount": 6
+    },
+    {
+      "url": "/member/add/register",
+      "typeName": "dev.mobile.local.app.web.member.MemberAddAction",
+      "simpleTypeName": "MemberAddAction",
+      "description": "@author jflute",
+      "typeComment": "@author jflute\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "timeManager",
+          "publicName": "timeManager",
+          "typeName": "org.lastaflute.core.time.TimeManager",
+          "simpleTypeName": "TimeManager",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "register",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "dev.mobile.local.app.web.member.MemberAddBody",
+        "simpleTypeName": "MemberAddBody",
+        "value": null,
+        "description": "@author jflute",
+        "comment": "@author jflute\n@author black-trooper",
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "memberName",
+            "publicName": "memberName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required",
+              "Length{max\u003d100}"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberAccount",
+            "publicName": "memberAccount",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required",
+              "Length{max\u003d50}"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "birthdate",
+            "publicName": "birthdate",
+            "typeName": "java.time.LocalDate",
+            "simpleTypeName": "LocalDate",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "ValidateTypeFailure"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberStatus",
+            "publicName": "memberStatus",
+            "typeName": "dev.mobile.local.dbflute.allcommon.CDef$MemberStatus",
+            "simpleTypeName": "CDef.MemberStatus",
+            "value": "{FML\u003dFormalized, WDL\u003dWithdrawal, PRV\u003dProvisional}",
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cdev.mobile.local.dbflute.exentity.Member\u003e",
+        "simpleTypeName": "JsonResponse\u003cMember\u003e",
+        "value": "asJson(member)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "_purchaseCount",
+            "publicName": "_purchaseCount",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "PURCHASE_COUNT: (Derived Referrer)",
+            "comment": "PURCHASE_COUNT: (Derived Referrer)",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_latestLoginDatetime",
+            "publicName": "_latestLoginDatetime",
+            "typeName": "java.time.LocalDateTime",
+            "simpleTypeName": "LocalDateTime",
+            "value": null,
+            "description": "LATEST_LOGIN_DATETIME: (Derived Referrer)",
+            "comment": "LATEST_LOGIN_DATETIME: (Derived Referrer)",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberId",
+            "publicName": "_memberId",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "(会員ID)MEMBER_ID: {PK, ID, NotNull, INT(10), FK to MEMBER_ADDRESS}",
+            "comment": "(会員ID)MEMBER_ID: {PK, ID, NotNull, INT(10), FK to MEMBER_ADDRESS}",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberName",
+            "publicName": "_memberName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": "(会員名称)MEMBER_NAME: {IX, NotNull, VARCHAR(100)}",
+            "comment": "(会員名称)MEMBER_NAME: {IX, NotNull, VARCHAR(100)}",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberAccount",
+            "publicName": "_memberAccount",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": "(会員アカウント)MEMBER_ACCOUNT: {UQ, NotNull, VARCHAR(50)}",
+            "comment": "(会員アカウント)MEMBER_ACCOUNT: {UQ, NotNull, VARCHAR(50)}",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberStatusCode",
+            "publicName": "_memberStatusCode",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": "(会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to member_status, classification\u003dMemberStatus}",
+            "comment": "(会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to member_status, classification\u003dMemberStatus}",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_formalizedDatetime",
+            "publicName": "_formalizedDatetime",
+            "typeName": "java.time.LocalDateTime",
+            "simpleTypeName": "LocalDateTime",
+            "value": null,
+            "description": "(正式会員日時)FORMALIZED_DATETIME: {IX, DATETIME(19)}",
+            "comment": "(正式会員日時)FORMALIZED_DATETIME: {IX, DATETIME(19)}",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_birthdate",
+            "publicName": "_birthdate",
+            "typeName": "java.time.LocalDate",
+            "simpleTypeName": "LocalDate",
+            "value": null,
+            "description": "(生年月日)BIRTHDATE: {DATE(10)}",
+            "comment": "(生年月日)BIRTHDATE: {DATE(10)}",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_registerDatetime",
+            "publicName": "_registerDatetime",
+            "typeName": "java.time.LocalDateTime",
+            "simpleTypeName": "LocalDateTime",
+            "value": null,
+            "description": "(登録日時)REGISTER_DATETIME: {NotNull, DATETIME(19)}",
+            "comment": "(登録日時)REGISTER_DATETIME: {NotNull, DATETIME(19)}",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_registerUser",
+            "publicName": "_registerUser",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": "(登録ユーザー)REGISTER_USER: {NotNull, VARCHAR(200)}",
+            "comment": "(登録ユーザー)REGISTER_USER: {NotNull, VARCHAR(200)}",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_updateDatetime",
+            "publicName": "_updateDatetime",
+            "typeName": "java.time.LocalDateTime",
+            "simpleTypeName": "LocalDateTime",
+            "value": null,
+            "description": "(更新日時)UPDATE_DATETIME: {NotNull, DATETIME(19)}",
+            "comment": "(更新日時)UPDATE_DATETIME: {NotNull, DATETIME(19)}",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_updateUser",
+            "publicName": "_updateUser",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": "(更新ユーザー)UPDATE_USER: {NotNull, VARCHAR(200)}",
+            "comment": "(更新ユーザー)UPDATE_USER: {NotNull, VARCHAR(200)}",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_versionNo",
+            "publicName": "_versionNo",
+            "typeName": "java.lang.Long",
+            "simpleTypeName": "Long",
+            "value": null,
+            "description": "(バージョン番号)VERSION_NO: {NotNull, BIGINT(19)}",
+            "comment": "(バージョン番号)VERSION_NO: {NotNull, BIGINT(19)}",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberStatus",
+            "publicName": "_memberStatus",
+            "typeName": "org.dbflute.optional.OptionalEntity\u003cMemberStatus\u003e",
+            "simpleTypeName": "OptionalEntity\u003cMemberStatus\u003e",
+            "value": null,
+            "description": "(会員ステータス)MEMBER_STATUS by my MEMBER_STATUS_CODE, named \u0027memberStatus\u0027",
+            "comment": "(会員ステータス)MEMBER_STATUS by my MEMBER_STATUS_CODE, named \u0027memberStatus\u0027.",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberAddressAsValid",
+            "publicName": "_memberAddressAsValid",
+            "typeName": "org.dbflute.optional.OptionalEntity\u003cMemberAddress\u003e",
+            "simpleTypeName": "OptionalEntity\u003cMemberAddress\u003e",
+            "value": null,
+            "description": "(会員住所情報)MEMBER_ADDRESS by my MEMBER_ID, named \u0027memberAddressAsValid\u0027",
+            "comment": "(会員住所情報)MEMBER_ADDRESS by my MEMBER_ID, named \u0027memberAddressAsValid\u0027.",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberLoginAsLatest",
+            "publicName": "_memberLoginAsLatest",
+            "typeName": "org.dbflute.optional.OptionalEntity\u003cMemberLogin\u003e",
+            "simpleTypeName": "OptionalEntity\u003cMemberLogin\u003e",
+            "value": null,
+            "description": "(会員ログイン)MEMBER_LOGIN by my MEMBER_ID, named \u0027memberLoginAsLatest\u0027",
+            "comment": "(会員ログイン)MEMBER_LOGIN by my MEMBER_ID, named \u0027memberLoginAsLatest\u0027.",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberSecurityAsOne",
+            "publicName": "_memberSecurityAsOne",
+            "typeName": "org.dbflute.optional.OptionalEntity\u003cMemberSecurity\u003e",
+            "simpleTypeName": "OptionalEntity\u003cMemberSecurity\u003e",
+            "value": null,
+            "description": "(会員セキュリティ)member_security by MEMBER_ID, named \u0027memberSecurityAsOne\u0027",
+            "comment": "(会員セキュリティ)member_security by MEMBER_ID, named \u0027memberSecurityAsOne\u0027.",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberServiceAsOne",
+            "publicName": "_memberServiceAsOne",
+            "typeName": "org.dbflute.optional.OptionalEntity\u003cMemberService\u003e",
+            "simpleTypeName": "OptionalEntity\u003cMemberService\u003e",
+            "value": null,
+            "description": "(会員サービス)member_service by MEMBER_ID, named \u0027memberServiceAsOne\u0027",
+            "comment": "(会員サービス)member_service by MEMBER_ID, named \u0027memberServiceAsOne\u0027.",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberWithdrawalAsOne",
+            "publicName": "_memberWithdrawalAsOne",
+            "typeName": "org.dbflute.optional.OptionalEntity\u003cMemberWithdrawal\u003e",
+            "simpleTypeName": "OptionalEntity\u003cMemberWithdrawal\u003e",
+            "value": null,
+            "description": "(会員退会情報)member_withdrawal by MEMBER_ID, named \u0027memberWithdrawalAsOne\u0027",
+            "comment": "(会員退会情報)member_withdrawal by MEMBER_ID, named \u0027memberWithdrawalAsOne\u0027.",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberAddressList",
+            "publicName": "_memberAddressList",
+            "typeName": "java.util.List\u003cMemberAddress\u003e",
+            "simpleTypeName": "List\u003cMemberAddress\u003e",
+            "value": null,
+            "description": "(会員住所情報)MEMBER_ADDRESS by MEMBER_ID, named \u0027memberAddressList\u0027",
+            "comment": "(会員住所情報)MEMBER_ADDRESS by MEMBER_ID, named \u0027memberAddressList\u0027.",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberFollowingByMyMemberIdList",
+            "publicName": "_memberFollowingByMyMemberIdList",
+            "typeName": "java.util.List\u003cMemberFollowing\u003e",
+            "simpleTypeName": "List\u003cMemberFollowing\u003e",
+            "value": null,
+            "description": "(会員フォローイング)MEMBER_FOLLOWING by MY_MEMBER_ID, named \u0027memberFollowingByMyMemberIdList\u0027",
+            "comment": "(会員フォローイング)MEMBER_FOLLOWING by MY_MEMBER_ID, named \u0027memberFollowingByMyMemberIdList\u0027.",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberFollowingByYourMemberIdList",
+            "publicName": "_memberFollowingByYourMemberIdList",
+            "typeName": "java.util.List\u003cMemberFollowing\u003e",
+            "simpleTypeName": "List\u003cMemberFollowing\u003e",
+            "value": null,
+            "description": "(会員フォローイング)MEMBER_FOLLOWING by YOUR_MEMBER_ID, named \u0027memberFollowingByYourMemberIdList\u0027",
+            "comment": "(会員フォローイング)MEMBER_FOLLOWING by YOUR_MEMBER_ID, named \u0027memberFollowingByYourMemberIdList\u0027.",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_memberLoginList",
+            "publicName": "_memberLoginList",
+            "typeName": "java.util.List\u003cMemberLogin\u003e",
+            "simpleTypeName": "List\u003cMemberLogin\u003e",
+            "value": null,
+            "description": "(会員ログイン)MEMBER_LOGIN by MEMBER_ID, named \u0027memberLoginList\u0027",
+            "comment": "(会員ログイン)MEMBER_LOGIN by MEMBER_ID, named \u0027memberLoginList\u0027.",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_purchaseList",
+            "publicName": "_purchaseList",
+            "typeName": "java.util.List\u003cPurchase\u003e",
+            "simpleTypeName": "List\u003cPurchase\u003e",
+            "value": null,
+            "description": "(購入)PURCHASE by MEMBER_ID, named \u0027purchaseList\u0027",
+            "comment": "(購入)PURCHASE by MEMBER_ID, named \u0027purchaseList\u0027.",
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "__uniqueDrivenProperties",
+            "publicName": "__uniqueDrivenProperties",
+            "typeName": "org.dbflute.dbmeta.accessory.EntityUniqueDrivenProperties",
+            "simpleTypeName": "EntityUniqueDrivenProperties",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "__modifiedProperties",
+            "publicName": "__modifiedProperties",
+            "typeName": "org.dbflute.dbmeta.accessory.EntityModifiedProperties",
+            "simpleTypeName": "EntityModifiedProperties",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "__specifiedProperties",
+            "publicName": "__specifiedProperties",
+            "typeName": "org.dbflute.dbmeta.accessory.EntityModifiedProperties",
+            "simpleTypeName": "EntityModifiedProperties",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "__derivedMap",
+            "publicName": "__derivedMap",
+            "typeName": "org.dbflute.dbmeta.accessory.EntityDerivedMap",
+            "simpleTypeName": "EntityDerivedMap",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "_undefinedClassificationSelectAllowed",
+            "publicName": "_undefinedClassificationSelectAllowed",
+            "typeName": "boolean",
+            "simpleTypeName": "boolean",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "__createdBySelect",
+            "publicName": "__createdBySelect",
+            "typeName": "boolean",
+            "simpleTypeName": "boolean",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "fileLineCount": 35,
+      "methodLineCount": 5
+    },
+    {
+      "url": "/member/edit/{memberId}",
+      "typeName": "dev.mobile.local.app.web.member.MemberEditAction",
+      "simpleTypeName": "MemberEditAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "index",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [
+        {
+          "name": "memberId",
+          "publicName": "memberId",
+          "typeName": "java.lang.Integer",
+          "simpleTypeName": "Integer",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cdev.mobile.local.app.web.member.MemberEditBody\u003e",
+        "simpleTypeName": "JsonResponse\u003cMemberEditBody\u003e",
+        "value": "asJson(memberEditBody)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "memberId",
+            "publicName": "memberId",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberName",
+            "publicName": "memberName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required",
+              "Length{max\u003d100}"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberAccount",
+            "publicName": "memberAccount",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required",
+              "Length{max\u003d50}"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberStatus",
+            "publicName": "memberStatus",
+            "typeName": "dev.mobile.local.dbflute.allcommon.CDef$MemberStatus",
+            "simpleTypeName": "CDef.MemberStatus",
+            "value": "{FML\u003dFormalized, WDL\u003dWithdrawal, PRV\u003dProvisional}",
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "birthdate",
+            "publicName": "birthdate",
+            "typeName": "java.time.LocalDate",
+            "simpleTypeName": "LocalDate",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "versionNo",
+            "publicName": "versionNo",
+            "typeName": "java.lang.Long",
+            "simpleTypeName": "Long",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "fileLineCount": 51,
+      "methodLineCount": 12
+    },
+    {
+      "url": "/member/edit/update",
+      "typeName": "dev.mobile.local.app.web.member.MemberEditAction",
+      "simpleTypeName": "MemberEditAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "update",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "dev.mobile.local.app.web.member.MemberEditBody",
+        "simpleTypeName": "MemberEditBody",
+        "value": null,
+        "description": "@author jflute",
+        "comment": "@author jflute\n@author iwamatsu0430\n@author black-trooper",
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "memberId",
+            "publicName": "memberId",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberName",
+            "publicName": "memberName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required",
+              "Length{max\u003d100}"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberAccount",
+            "publicName": "memberAccount",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required",
+              "Length{max\u003d50}"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberStatus",
+            "publicName": "memberStatus",
+            "typeName": "dev.mobile.local.dbflute.allcommon.CDef$MemberStatus",
+            "simpleTypeName": "CDef.MemberStatus",
+            "value": "{FML\u003dFormalized, WDL\u003dWithdrawal, PRV\u003dProvisional}",
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "birthdate",
+            "publicName": "birthdate",
+            "typeName": "java.time.LocalDate",
+            "simpleTypeName": "LocalDate",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "versionNo",
+            "publicName": "versionNo",
+            "typeName": "java.lang.Long",
+            "simpleTypeName": "Long",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.lang.Void\u003e",
+        "simpleTypeName": "JsonResponse\u003cVoid\u003e",
+        "value": "JsonResponse.asEmptyBody()",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 51,
+      "methodLineCount": 12
+    },
+    {
+      "url": "/member/list/{pageNumber}",
+      "typeName": "dev.mobile.local.app.web.member.MemberListAction",
+      "simpleTypeName": "MemberListAction",
+      "description": "@author jflute",
+      "typeComment": "@author jflute\n@author iwamatsu0430\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "pagingAssist",
+          "publicName": "pagingAssist",
+          "typeName": "dev.mobile.local.app.web.base.paging.PagingAssist",
+          "simpleTypeName": "PagingAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "index",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [
+        {
+          "name": "pageNumber",
+          "publicName": "pageNumber",
+          "typeName": "org.dbflute.optional.OptionalThing\u003cjava.lang.Integer\u003e",
+          "simpleTypeName": "OptionalThing\u003cInteger\u003e",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "formTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "dev.mobile.local.app.web.member.MemberSearchBody",
+        "simpleTypeName": "MemberSearchBody",
+        "value": null,
+        "description": "@author jflute",
+        "comment": "@author jflute\n@author iwamatsu0430",
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "memberName",
+            "publicName": "memberName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Length{max\u003d5}"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberStatus",
+            "publicName": "memberStatus",
+            "typeName": "dev.mobile.local.dbflute.allcommon.CDef$MemberStatus",
+            "simpleTypeName": "CDef.MemberStatus",
+            "value": "{FML\u003dFormalized, WDL\u003dWithdrawal, PRV\u003dProvisional}",
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "purchaseProductName",
+            "publicName": "purchaseProductName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Length{max\u003d10}"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "unpaid",
+            "publicName": "unpaid",
+            "typeName": "boolean",
+            "simpleTypeName": "boolean",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "formalizedFrom",
+            "publicName": "formalizedFrom",
+            "typeName": "java.time.LocalDate",
+            "simpleTypeName": "LocalDate",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "ValidateTypeFailure"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "formalizedTo",
+            "publicName": "formalizedTo",
+            "typeName": "java.time.LocalDate",
+            "simpleTypeName": "LocalDate",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "ValidateTypeFailure"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cdev.mobile.local.app.web.base.paging.SearchPagingResult\u003cdev.mobile.local.app.web.member.MemberSearchRowResult\u003e\u003e",
+        "simpleTypeName": "JsonResponse\u003cSearchPagingResult\u003cMemberSearchRowResult\u003e\u003e",
+        "value": "asJson(result)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "pageSize",
+            "publicName": "pageSize",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "row count per one page",
+            "comment": "row count per one page",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "currentPageNumber",
+            "publicName": "currentPageNumber",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "number of current page",
+            "comment": "number of current page",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "allRecordCount",
+            "publicName": "allRecordCount",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "count of all records",
+            "comment": "count of all records",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "allPageCount",
+            "publicName": "allPageCount",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "count of all pages",
+            "comment": "count of all pages",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "rows",
+            "publicName": "rows",
+            "typeName": "java.util.List\u003cdev.mobile.local.app.web.member.MemberSearchRowResult\u003e",
+            "simpleTypeName": "List\u003cMemberSearchRowResult\u003e",
+            "value": null,
+            "description": "paging data for current page",
+            "comment": "paging data for current page",
+            "annotationList": [
+              "NotNull",
+              "Valid"
+            ],
+            "nestTypeDocMetaList": [
+              {
+                "name": "memberId",
+                "publicName": "memberId",
+                "typeName": "java.lang.Integer",
+                "simpleTypeName": "Integer",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "memberName",
+                "publicName": "memberName",
+                "typeName": "java.lang.String",
+                "simpleTypeName": "String",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "memberStatusName",
+                "publicName": "memberStatusName",
+                "typeName": "java.lang.String",
+                "simpleTypeName": "String",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "formalizedDate",
+                "publicName": "formalizedDate",
+                "typeName": "java.time.LocalDate",
+                "simpleTypeName": "LocalDate",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "updateDatetime",
+                "publicName": "updateDatetime",
+                "typeName": "java.time.LocalDateTime",
+                "simpleTypeName": "LocalDateTime",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "withdrawalMember",
+                "publicName": "withdrawalMember",
+                "typeName": "java.lang.Boolean",
+                "simpleTypeName": "Boolean",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "purchaseCount",
+                "publicName": "purchaseCount",
+                "typeName": "java.lang.Integer",
+                "simpleTypeName": "Integer",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              }
+            ]
+          }
+        ]
+      },
+      "fileLineCount": 83,
+      "methodLineCount": 6
+    },
+    {
+      "url": "/member/purchase/list/{memberId}/{pageNumber}",
+      "typeName": "dev.mobile.local.app.web.member.purchase.MemberPurchaseListAction",
+      "simpleTypeName": "MemberPurchaseListAction",
+      "description": "@author jflute",
+      "typeComment": "@author jflute\n@author iwamatsu0430\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "purchaseBhv",
+          "publicName": "purchaseBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.PurchaseBhv",
+          "simpleTypeName": "PurchaseBhv",
+          "value": null,
+          "description": "The behavior of PURCHASE.",
+          "comment": "The behavior of PURCHASE.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "purchasePaymentBhv",
+          "publicName": "purchasePaymentBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.PurchasePaymentBhv",
+          "simpleTypeName": "PurchasePaymentBhv",
+          "value": null,
+          "description": "The behavior of purchase_payment.",
+          "comment": "The behavior of purchase_payment.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "pagingAssist",
+          "publicName": "pagingAssist",
+          "typeName": "dev.mobile.local.app.web.base.paging.PagingAssist",
+          "simpleTypeName": "PagingAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "index",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [
+        {
+          "name": "memberId",
+          "publicName": "memberId",
+          "typeName": "java.lang.Integer",
+          "simpleTypeName": "Integer",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "pageNumber",
+          "publicName": "pageNumber",
+          "typeName": "org.dbflute.optional.OptionalThing\u003cjava.lang.Integer\u003e",
+          "simpleTypeName": "OptionalThing\u003cInteger\u003e",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cdev.mobile.local.app.web.base.paging.SearchPagingResult\u003cdev.mobile.local.app.web.member.purchase.MemberPurchaseSearchRowResult\u003e\u003e",
+        "simpleTypeName": "JsonResponse\u003cSearchPagingResult\u003cMemberPurchaseSearchRowResult\u003e\u003e",
+        "value": "asJson(result)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "pageSize",
+            "publicName": "pageSize",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "row count per one page",
+            "comment": "row count per one page",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "currentPageNumber",
+            "publicName": "currentPageNumber",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "number of current page",
+            "comment": "number of current page",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "allRecordCount",
+            "publicName": "allRecordCount",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "count of all records",
+            "comment": "count of all records",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "allPageCount",
+            "publicName": "allPageCount",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "count of all pages",
+            "comment": "count of all pages",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "rows",
+            "publicName": "rows",
+            "typeName": "java.util.List\u003cdev.mobile.local.app.web.member.purchase.MemberPurchaseSearchRowResult\u003e",
+            "simpleTypeName": "List\u003cMemberPurchaseSearchRowResult\u003e",
+            "value": null,
+            "description": "paging data for current page",
+            "comment": "paging data for current page",
+            "annotationList": [
+              "NotNull",
+              "Valid"
+            ],
+            "nestTypeDocMetaList": [
+              {
+                "name": "purchaseId",
+                "publicName": "purchaseId",
+                "typeName": "java.lang.Long",
+                "simpleTypeName": "Long",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "purchaseDatetime",
+                "publicName": "purchaseDatetime",
+                "typeName": "java.time.LocalDateTime",
+                "simpleTypeName": "LocalDateTime",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "productName",
+                "publicName": "productName",
+                "typeName": "java.lang.String",
+                "simpleTypeName": "String",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "purchasePrice",
+                "publicName": "purchasePrice",
+                "typeName": "java.lang.Integer",
+                "simpleTypeName": "Integer",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "purchaseCount",
+                "publicName": "purchaseCount",
+                "typeName": "java.lang.Integer",
+                "simpleTypeName": "Integer",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "paymentComplete",
+                "publicName": "paymentComplete",
+                "typeName": "java.lang.Boolean",
+                "simpleTypeName": "Boolean",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              }
+            ]
+          }
+        ]
+      },
+      "fileLineCount": 64,
+      "methodLineCount": 5
+    },
+    {
+      "url": "/member/purchase/list/delete/{purchaseId}",
+      "typeName": "dev.mobile.local.app.web.member.purchase.MemberPurchaseListAction",
+      "simpleTypeName": "MemberPurchaseListAction",
+      "description": "@author jflute",
+      "typeComment": "@author jflute\n@author iwamatsu0430\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "purchaseBhv",
+          "publicName": "purchaseBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.PurchaseBhv",
+          "simpleTypeName": "PurchaseBhv",
+          "value": null,
+          "description": "The behavior of PURCHASE.",
+          "comment": "The behavior of PURCHASE.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "purchasePaymentBhv",
+          "publicName": "purchasePaymentBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.PurchasePaymentBhv",
+          "simpleTypeName": "PurchasePaymentBhv",
+          "value": null,
+          "description": "The behavior of purchase_payment.",
+          "comment": "The behavior of purchase_payment.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "pagingAssist",
+          "publicName": "pagingAssist",
+          "typeName": "dev.mobile.local.app.web.base.paging.PagingAssist",
+          "simpleTypeName": "PagingAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "delete",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [
+        {
+          "name": "purchaseId",
+          "publicName": "purchaseId",
+          "typeName": "java.lang.Long",
+          "simpleTypeName": "Long",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.lang.Void\u003e",
+        "simpleTypeName": "JsonResponse\u003cVoid\u003e",
+        "value": "JsonResponse.asEmptyBody()",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 64,
+      "methodLineCount": 9
+    },
+    {
+      "url": "/mypage/",
+      "typeName": "dev.mobile.local.app.web.mypage.MypageAction",
+      "simpleTypeName": "MypageAction",
+      "description": "@author shunsuke.tadokoro",
+      "typeComment": "@author shunsuke.tadokoro\n@author jflute\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "productBhv",
+          "publicName": "productBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.ProductBhv",
+          "simpleTypeName": "ProductBhv",
+          "value": null,
+          "description": "The behavior of PRODUCT.",
+          "comment": "The behavior of PRODUCT.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "index",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cdev.mobile.local.app.web.mypage.MypageResult\u003e",
+        "simpleTypeName": "JsonResponse\u003cMypageResult\u003e",
+        "value": "asJson(result)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "recentProducts",
+            "publicName": "recentProducts",
+            "typeName": "java.util.List\u003cdev.mobile.local.app.web.mypage.MypageResult$ProductPart\u003e",
+            "simpleTypeName": "List\u003cProductPart\u003e",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "NotNull",
+              "Valid"
+            ],
+            "nestTypeDocMetaList": [
+              {
+                "name": "productName",
+                "publicName": "productName",
+                "typeName": "java.lang.String",
+                "simpleTypeName": "String",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "regularPrice",
+                "publicName": "regularPrice",
+                "typeName": "java.lang.Integer",
+                "simpleTypeName": "Integer",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              }
+            ]
+          },
+          {
+            "name": "highPriceProducts",
+            "publicName": "highPriceProducts",
+            "typeName": "java.util.List\u003cdev.mobile.local.app.web.mypage.MypageResult$ProductPart\u003e",
+            "simpleTypeName": "List\u003cProductPart\u003e",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "NotNull",
+              "Valid"
+            ],
+            "nestTypeDocMetaList": [
+              {
+                "name": "productName",
+                "publicName": "productName",
+                "typeName": "java.lang.String",
+                "simpleTypeName": "String",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "regularPrice",
+                "publicName": "regularPrice",
+                "typeName": "java.lang.Integer",
+                "simpleTypeName": "Integer",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              }
+            ]
+          }
+        ]
+      },
+      "fileLineCount": 54,
+      "methodLineCount": 6
+    },
+    {
+      "url": "/product/detail/{productId}",
+      "typeName": "dev.mobile.local.app.web.product.ProductDetailAction",
+      "simpleTypeName": "ProductDetailAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "productBhv",
+          "publicName": "productBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.ProductBhv",
+          "simpleTypeName": "ProductBhv",
+          "value": null,
+          "description": "The behavior of PRODUCT.",
+          "comment": "The behavior of PRODUCT.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "index",
+      "methodComment": null,
+      "annotationList": [
+        "AllowAnyoneAccess",
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [
+        {
+          "name": "productId",
+          "publicName": "productId",
+          "typeName": "java.lang.Integer",
+          "simpleTypeName": "Integer",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cdev.mobile.local.app.web.product.ProductDetailResult\u003e",
+        "simpleTypeName": "JsonResponse\u003cProductDetailResult\u003e",
+        "value": "asJson(mappingToBean(product)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "productId",
+            "publicName": "productId",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "productName",
+            "publicName": "productName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "categoryName",
+            "publicName": "categoryName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "regularPrice",
+            "publicName": "regularPrice",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "productHandleCode",
+            "publicName": "productHandleCode",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "fileLineCount": 42,
+      "methodLineCount": 4
+    },
+    {
+      "url": "/product/list/search/{pageNumber}",
+      "typeName": "dev.mobile.local.app.web.product.ProductListAction",
+      "simpleTypeName": "ProductListAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "productBhv",
+          "publicName": "productBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.ProductBhv",
+          "simpleTypeName": "ProductBhv",
+          "value": null,
+          "description": "The behavior of PRODUCT.",
+          "comment": "The behavior of PRODUCT.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "productStatusBhv",
+          "publicName": "productStatusBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.ProductStatusBhv",
+          "simpleTypeName": "ProductStatusBhv",
+          "value": null,
+          "description": "The behavior of PRODUCT_STATUS.",
+          "comment": "The behavior of PRODUCT_STATUS.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "pagingAssist",
+          "publicName": "pagingAssist",
+          "typeName": "dev.mobile.local.app.web.base.paging.PagingAssist",
+          "simpleTypeName": "PagingAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "search",
+      "methodComment": null,
+      "annotationList": [
+        "AllowAnyoneAccess",
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [
+        {
+          "name": "pageNumber",
+          "publicName": "pageNumber",
+          "typeName": "org.dbflute.optional.OptionalThing\u003cjava.lang.Integer\u003e",
+          "simpleTypeName": "OptionalThing\u003cInteger\u003e",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "formTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "dev.mobile.local.app.web.product.ProductSearchBody",
+        "simpleTypeName": "ProductSearchBody",
+        "value": null,
+        "description": "@author iwamatsu0430",
+        "comment": "@author iwamatsu0430\n@author jflute",
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "productName",
+            "publicName": "productName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Length{max\u003d10}"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "productStatus",
+            "publicName": "productStatus",
+            "typeName": "dev.mobile.local.dbflute.allcommon.CDef$ProductStatus",
+            "simpleTypeName": "CDef.ProductStatus",
+            "value": "{ONS\u003dOnSaleProduction, PST\u003dProductionStop, SST\u003dSaleStop}",
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "purchaseMemberName",
+            "publicName": "purchaseMemberName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Length{max\u003d5}"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cdev.mobile.local.app.web.base.paging.SearchPagingResult\u003cdev.mobile.local.app.web.product.ProductRowResult\u003e\u003e",
+        "simpleTypeName": "JsonResponse\u003cSearchPagingResult\u003cProductRowResult\u003e\u003e",
+        "value": "mappingToResult(product),asJson(result)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "pageSize",
+            "publicName": "pageSize",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "row count per one page",
+            "comment": "row count per one page",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "currentPageNumber",
+            "publicName": "currentPageNumber",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "number of current page",
+            "comment": "number of current page",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "allRecordCount",
+            "publicName": "allRecordCount",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "count of all records",
+            "comment": "count of all records",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "allPageCount",
+            "publicName": "allPageCount",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": "count of all pages",
+            "comment": "count of all pages",
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "rows",
+            "publicName": "rows",
+            "typeName": "java.util.List\u003cdev.mobile.local.app.web.product.ProductRowResult\u003e",
+            "simpleTypeName": "List\u003cProductRowResult\u003e",
+            "value": null,
+            "description": "paging data for current page",
+            "comment": "paging data for current page",
+            "annotationList": [
+              "NotNull",
+              "Valid"
+            ],
+            "nestTypeDocMetaList": [
+              {
+                "name": "productId",
+                "publicName": "productId",
+                "typeName": "java.lang.Integer",
+                "simpleTypeName": "Integer",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "productName",
+                "publicName": "productName",
+                "typeName": "java.lang.String",
+                "simpleTypeName": "String",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "productStatus",
+                "publicName": "productStatus",
+                "typeName": "java.lang.String",
+                "simpleTypeName": "String",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "productCategory",
+                "publicName": "productCategory",
+                "typeName": "java.lang.String",
+                "simpleTypeName": "String",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "regularPrice",
+                "publicName": "regularPrice",
+                "typeName": "java.lang.Integer",
+                "simpleTypeName": "Integer",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "latestPurchaseDate",
+                "publicName": "latestPurchaseDate",
+                "typeName": "java.time.LocalDate",
+                "simpleTypeName": "LocalDate",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [],
+                "nestTypeDocMetaList": []
+              }
+            ]
+          }
+        ]
+      },
+      "fileLineCount": 82,
+      "methodLineCount": 11
+    },
+    {
+      "url": "/product/list/status",
+      "typeName": "dev.mobile.local.app.web.product.ProductListAction",
+      "simpleTypeName": "ProductListAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "productBhv",
+          "publicName": "productBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.ProductBhv",
+          "simpleTypeName": "ProductBhv",
+          "value": null,
+          "description": "The behavior of PRODUCT.",
+          "comment": "The behavior of PRODUCT.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "productStatusBhv",
+          "publicName": "productStatusBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.ProductStatusBhv",
+          "simpleTypeName": "ProductStatusBhv",
+          "value": null,
+          "description": "The behavior of PRODUCT_STATUS.",
+          "comment": "The behavior of PRODUCT_STATUS.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "pagingAssist",
+          "publicName": "pagingAssist",
+          "typeName": "dev.mobile.local.app.web.base.paging.PagingAssist",
+          "simpleTypeName": "PagingAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "status",
+      "methodComment": null,
+      "annotationList": [
+        "AllowAnyoneAccess",
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.util.List\u003cjava.util.AbstractMap.java.util.AbstractMap$SimpleEntry\u003cjava.lang.String, java.lang.String\u003e\u003e\u003e",
+        "simpleTypeName": "JsonResponse\u003cList\u003cAbstractMAbstractMap$SimpleEntry\u003cString, String\u003e\u003e\u003e",
+        "value": "new SimpleEntry\u003c\u003e(m.code(),asJson(productStatusList)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "key",
+            "publicName": "key",
+            "typeName": "java.lang.Object",
+            "simpleTypeName": "Object",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "value",
+            "publicName": "value",
+            "typeName": "java.lang.Object",
+            "simpleTypeName": "Object",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "fileLineCount": 82,
+      "methodLineCount": 6
+    },
+    {
+      "url": "/profile/",
+      "typeName": "dev.mobile.local.app.web.profile.ProfileAction",
+      "simpleTypeName": "ProfileAction",
+      "description": "@author jflute",
+      "typeComment": "@author jflute\n@author deco\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "index",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cdev.mobile.local.app.web.profile.ProfileResult\u003e",
+        "simpleTypeName": "JsonResponse\u003cProfileResult\u003e",
+        "value": "asJson(result)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "memberId",
+            "publicName": "memberId",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberName",
+            "publicName": "memberName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberStatusName",
+            "publicName": "memberStatusName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "servicePointCount",
+            "publicName": "servicePointCount",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "serviceRankName",
+            "publicName": "serviceRankName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "purchaseList",
+            "publicName": "purchaseList",
+            "typeName": "java.util.List\u003cdev.mobile.local.app.web.profile.ProfileResult$PurchasedProductPart\u003e",
+            "simpleTypeName": "List\u003cPurchasedProductPart\u003e",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "NotNull",
+              "Valid"
+            ],
+            "nestTypeDocMetaList": [
+              {
+                "name": "productName",
+                "publicName": "productName",
+                "typeName": "java.lang.String",
+                "simpleTypeName": "String",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "regularPrice",
+                "publicName": "regularPrice",
+                "typeName": "java.lang.Integer",
+                "simpleTypeName": "Integer",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              },
+              {
+                "name": "purchaseDateTime",
+                "publicName": "purchaseDateTime",
+                "typeName": "java.time.LocalDateTime",
+                "simpleTypeName": "LocalDateTime",
+                "value": null,
+                "description": null,
+                "comment": null,
+                "annotationList": [
+                  "Required"
+                ],
+                "nestTypeDocMetaList": []
+              }
+            ]
+          }
+        ]
+      },
+      "fileLineCount": 45,
+      "methodLineCount": 5
+    },
+    {
+      "url": "/purchase/count",
+      "typeName": "dev.mobile.local.app.web.purchase.PurchaseAction",
+      "simpleTypeName": "PurchaseAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "productBhv",
+          "publicName": "productBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.ProductBhv",
+          "simpleTypeName": "ProductBhv",
+          "value": null,
+          "description": "The behavior of PRODUCT.",
+          "comment": "The behavior of PRODUCT.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "purchaseBhv",
+          "publicName": "purchaseBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.PurchaseBhv",
+          "simpleTypeName": "PurchaseBhv",
+          "value": null,
+          "description": "The behavior of PURCHASE.",
+          "comment": "The behavior of PURCHASE.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "count",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "dev.mobile.local.app.web.purchase.PurchaseProductBody",
+        "simpleTypeName": "PurchaseProductBody",
+        "value": null,
+        "description": "@author iwamatsu0430",
+        "comment": "@author iwamatsu0430\n@author jflute",
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "productId",
+            "publicName": "productId",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "purchaseCount",
+            "publicName": "purchaseCount",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required",
+              "Min{value\u003d1}"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cdev.mobile.local.app.web.purchase.PurchasePriceResult\u003e",
+        "simpleTypeName": "JsonResponse\u003cPurchasePriceResult\u003e",
+        "value": "asJson(result)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "price",
+            "publicName": "price",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "fileLineCount": 68,
+      "methodLineCount": 6
+    },
+    {
+      "url": "/purchase/contract",
+      "typeName": "dev.mobile.local.app.web.purchase.PurchaseAction",
+      "simpleTypeName": "PurchaseAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "productBhv",
+          "publicName": "productBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.ProductBhv",
+          "simpleTypeName": "ProductBhv",
+          "value": null,
+          "description": "The behavior of PRODUCT.",
+          "comment": "The behavior of PRODUCT.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "purchaseBhv",
+          "publicName": "purchaseBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.PurchaseBhv",
+          "simpleTypeName": "PurchaseBhv",
+          "value": null,
+          "description": "The behavior of PURCHASE.",
+          "comment": "The behavior of PURCHASE.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "contract",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "dev.mobile.local.app.web.purchase.PurchaseProductBody",
+        "simpleTypeName": "PurchaseProductBody",
+        "value": null,
+        "description": "@author iwamatsu0430",
+        "comment": "@author iwamatsu0430\n@author jflute",
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "productId",
+            "publicName": "productId",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "purchaseCount",
+            "publicName": "purchaseCount",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required",
+              "Min{value\u003d1}"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cdev.mobile.local.app.web.purchase.PurchasePriceResult\u003e",
+        "simpleTypeName": "JsonResponse\u003cPurchasePriceResult\u003e",
+        "value": "asJson(result)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "price",
+            "publicName": "price",
+            "typeName": "java.lang.Integer",
+            "simpleTypeName": "Integer",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "fileLineCount": 68,
+      "methodLineCount": 9
+    },
+    {
+      "url": "/signin/",
+      "typeName": "dev.mobile.local.app.web.signin.SigninAction",
+      "simpleTypeName": "SigninAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute\n@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "loginAssist",
+          "publicName": "loginAssist",
+          "typeName": "dev.mobile.local.app.web.base.login.SongLoginAssist",
+          "simpleTypeName": "SongLoginAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute\n@author black-trooper",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "index",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "dev.mobile.local.app.web.signin.SigninBody",
+        "simpleTypeName": "SigninBody",
+        "value": null,
+        "description": "The form of member\u0027s Login.",
+        "comment": "The form of member\u0027s Login.\n\n@author iwamatsu0430\n@author jflute",
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "account",
+            "publicName": "account",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "password",
+            "publicName": "password",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.lang.String\u003e",
+        "simpleTypeName": "JsonResponse\u003cString\u003e",
+        "value": "asJson(loginAssist.generateAuthKey(body.account, body.password)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 30,
+      "methodLineCount": 6
+    },
+    {
+      "url": "/signup/",
+      "typeName": "dev.mobile.local.app.web.signup.SignupAction",
+      "simpleTypeName": "SignupAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "postbox",
+          "publicName": "postbox",
+          "typeName": "org.lastaflute.core.mail.Postbox",
+          "simpleTypeName": "Postbox",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "config",
+          "publicName": "config",
+          "typeName": "dev.mobile.local.mylasta.direction.SongConfig",
+          "simpleTypeName": "SongConfig",
+          "value": null,
+          "description": "@author FreeGen",
+          "comment": "@author FreeGen",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "loginAssist",
+          "publicName": "loginAssist",
+          "typeName": "dev.mobile.local.app.web.base.login.SongLoginAssist",
+          "simpleTypeName": "SongLoginAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute\n@author black-trooper",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberSecurityBhv",
+          "publicName": "memberSecurityBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberSecurityBhv",
+          "simpleTypeName": "MemberSecurityBhv",
+          "value": null,
+          "description": "The behavior of MEMBER_SECURITY.",
+          "comment": "The behavior of MEMBER_SECURITY.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberServiceBhv",
+          "publicName": "memberServiceBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberServiceBhv",
+          "simpleTypeName": "MemberServiceBhv",
+          "value": null,
+          "description": "The behavior of MEMBER_SERVICE.",
+          "comment": "The behavior of MEMBER_SERVICE.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "signupTokenAssist",
+          "publicName": "signupTokenAssist",
+          "typeName": "dev.mobile.local.app.web.signup.SignupTokenAssist",
+          "simpleTypeName": "SignupTokenAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "index",
+      "methodComment": null,
+      "annotationList": [
+        "AllowAnyoneAccess",
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "dev.mobile.local.app.web.signup.SignupBody",
+        "simpleTypeName": "SignupBody",
+        "value": null,
+        "description": "@author iwamatsu0430",
+        "comment": "@author iwamatsu0430",
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "memberName",
+            "publicName": "memberName",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "memberAccount",
+            "publicName": "memberAccount",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "password",
+            "publicName": "password",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "reminderQuestion",
+            "publicName": "reminderQuestion",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "reminderAnswer",
+            "publicName": "reminderAnswer",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.lang.Object\u003e",
+        "simpleTypeName": "JsonResponse\u003cObject\u003e",
+        "value": "JsonResponse.asEmptyBody()",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 98,
+      "methodLineCount": 9
+    },
+    {
+      "url": "/signup/register/{account}/{token}",
+      "typeName": "dev.mobile.local.app.web.signup.SignupAction",
+      "simpleTypeName": "SignupAction",
+      "description": "@author iwamatsu0430",
+      "typeComment": "@author iwamatsu0430\n@author jflute",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "postbox",
+          "publicName": "postbox",
+          "typeName": "org.lastaflute.core.mail.Postbox",
+          "simpleTypeName": "Postbox",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "config",
+          "publicName": "config",
+          "typeName": "dev.mobile.local.mylasta.direction.SongConfig",
+          "simpleTypeName": "SongConfig",
+          "value": null,
+          "description": "@author FreeGen",
+          "comment": "@author FreeGen",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "loginAssist",
+          "publicName": "loginAssist",
+          "typeName": "dev.mobile.local.app.web.base.login.SongLoginAssist",
+          "simpleTypeName": "SongLoginAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute\n@author black-trooper",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberSecurityBhv",
+          "publicName": "memberSecurityBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberSecurityBhv",
+          "simpleTypeName": "MemberSecurityBhv",
+          "value": null,
+          "description": "The behavior of MEMBER_SECURITY.",
+          "comment": "The behavior of MEMBER_SECURITY.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberServiceBhv",
+          "publicName": "memberServiceBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberServiceBhv",
+          "simpleTypeName": "MemberServiceBhv",
+          "value": null,
+          "description": "The behavior of MEMBER_SERVICE.",
+          "comment": "The behavior of MEMBER_SERVICE.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "signupTokenAssist",
+          "publicName": "signupTokenAssist",
+          "typeName": "dev.mobile.local.app.web.signup.SignupTokenAssist",
+          "simpleTypeName": "SignupTokenAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "register",
+      "methodComment": null,
+      "annotationList": [
+        "AllowAnyoneAccess",
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [
+        {
+          "name": "account",
+          "publicName": "account",
+          "typeName": "java.lang.String",
+          "simpleTypeName": "String",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "token",
+          "publicName": "token",
+          "typeName": "java.lang.String",
+          "simpleTypeName": "String",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.lang.Void\u003e",
+        "simpleTypeName": "JsonResponse\u003cVoid\u003e",
+        "value": "JsonResponse.asEmptyBody()",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 98,
+      "methodLineCount": 5
+    },
+    {
+      "url": "/withdrawal/reason",
+      "typeName": "dev.mobile.local.app.web.withdrawal.WithdrawalAction",
+      "simpleTypeName": "WithdrawalAction",
+      "description": "@author black-trooper",
+      "typeComment": "@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "timeManager",
+          "publicName": "timeManager",
+          "typeName": "org.lastaflute.core.time.TimeManager",
+          "simpleTypeName": "TimeManager",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberWithdrawalBhv",
+          "publicName": "memberWithdrawalBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberWithdrawalBhv",
+          "simpleTypeName": "MemberWithdrawalBhv",
+          "value": null,
+          "description": "The behavior of MEMBER_WITHDRAWAL.",
+          "comment": "The behavior of MEMBER_WITHDRAWAL.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "reason",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.util.List\u003cjava.util.AbstractMap.java.util.AbstractMap$SimpleEntry\u003cjava.lang.String, java.lang.String\u003e\u003e\u003e",
+        "simpleTypeName": "JsonResponse\u003cList\u003cAbstractMAbstractMap$SimpleEntry\u003cString, String\u003e\u003e\u003e",
+        "value": "new SimpleEntry\u003c\u003e(m.code(),asJson(reasonList)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "key",
+            "publicName": "key",
+            "typeName": "java.lang.Object",
+            "simpleTypeName": "Object",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "value",
+            "publicName": "value",
+            "typeName": "java.lang.Object",
+            "simpleTypeName": "Object",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "fileLineCount": 59,
+      "methodLineCount": 6
+    },
+    {
+      "url": "/withdrawal/done",
+      "typeName": "dev.mobile.local.app.web.withdrawal.WithdrawalAction",
+      "simpleTypeName": "WithdrawalAction",
+      "description": "@author black-trooper",
+      "typeComment": "@author black-trooper",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "timeManager",
+          "publicName": "timeManager",
+          "typeName": "org.lastaflute.core.time.TimeManager",
+          "simpleTypeName": "TimeManager",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberWithdrawalBhv",
+          "publicName": "memberWithdrawalBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberWithdrawalBhv",
+          "simpleTypeName": "MemberWithdrawalBhv",
+          "value": null,
+          "description": "The behavior of MEMBER_WITHDRAWAL.",
+          "comment": "The behavior of MEMBER_WITHDRAWAL.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "done",
+      "methodComment": null,
+      "annotationList": [
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "dev.mobile.local.app.web.withdrawal.WithdrawalBody",
+        "simpleTypeName": "WithdrawalBody",
+        "value": null,
+        "description": "@author black-trooper",
+        "comment": "@author black-trooper",
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "selectedReason",
+            "publicName": "selectedReason",
+            "typeName": "dev.mobile.local.dbflute.allcommon.CDef$WithdrawalReason",
+            "simpleTypeName": "CDef.WithdrawalReason",
+            "value": "{SIT\u003dSIT, PRD\u003dPRD, FRT\u003dFRT, OTH\u003dOTH}",
+            "description": null,
+            "comment": null,
+            "annotationList": [],
+            "nestTypeDocMetaList": []
+          },
+          {
+            "name": "reasonInput",
+            "publicName": "reasonInput",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Length{max\u003d30}"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.lang.Integer\u003e",
+        "simpleTypeName": "JsonResponse\u003cInteger\u003e",
+        "value": "asJson(memberId)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 59,
+      "methodLineCount": 7
+    },
+    {
+      "url": "/wx/faicli/",
+      "typeName": "dev.mobile.local.app.web.wx.faicli.WxFaicliAction",
+      "simpleTypeName": "WxFaicliAction",
+      "description": "@author jflute",
+      "typeComment": "@author jflute",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "loginAssist",
+          "publicName": "loginAssist",
+          "typeName": "dev.mobile.local.app.web.base.login.SongLoginAssist",
+          "simpleTypeName": "SongLoginAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute\n@author black-trooper",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "index",
+      "methodComment": null,
+      "annotationList": [
+        "AllowAnyoneAccess",
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "dev.mobile.local.app.web.wx.faicli.WxFaicliForm",
+        "simpleTypeName": "WxFaicliForm",
+        "value": null,
+        "description": "@author jflute",
+        "comment": "@author jflute",
+        "annotationList": [],
+        "nestTypeDocMetaList": [
+          {
+            "name": "sea",
+            "publicName": "sea",
+            "typeName": "java.lang.String",
+            "simpleTypeName": "String",
+            "value": null,
+            "description": null,
+            "comment": null,
+            "annotationList": [
+              "Required",
+              "Length{min\u003d2, max\u003d5}"
+            ],
+            "nestTypeDocMetaList": []
+          }
+        ]
+      },
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.util.Map\u003cjava.lang.String, java.lang.Object\u003e\u003e",
+        "simpleTypeName": "JsonResponse\u003cMap\u003cString, Object\u003e\u003e",
+        "value": "asJson(columnMap)",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 35,
+      "methodLineCount": 6
+    },
+    {
+      "url": "/wx/faicli/unknown",
+      "typeName": "dev.mobile.local.app.web.wx.faicli.WxFaicliAction",
+      "simpleTypeName": "WxFaicliAction",
+      "description": "@author jflute",
+      "typeComment": "@author jflute",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "loginAssist",
+          "publicName": "loginAssist",
+          "typeName": "dev.mobile.local.app.web.base.login.SongLoginAssist",
+          "simpleTypeName": "SongLoginAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute\n@author black-trooper",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "unknown",
+      "methodComment": null,
+      "annotationList": [
+        "AllowAnyoneAccess",
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.lang.Void\u003e",
+        "simpleTypeName": "JsonResponse\u003cVoid\u003e",
+        "value": null,
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 35,
+      "methodLineCount": 6
+    },
+    {
+      "url": "/wx/faicli/entity/{account}",
+      "typeName": "dev.mobile.local.app.web.wx.faicli.WxFaicliAction",
+      "simpleTypeName": "WxFaicliAction",
+      "description": "@author jflute",
+      "typeComment": "@author jflute",
+      "fieldTypeDocMetaList": [
+        {
+          "name": "loginAssist",
+          "publicName": "loginAssist",
+          "typeName": "dev.mobile.local.app.web.base.login.SongLoginAssist",
+          "simpleTypeName": "SongLoginAssist",
+          "value": null,
+          "description": "@author jflute",
+          "comment": "@author jflute\n@author black-trooper",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        },
+        {
+          "name": "memberBhv",
+          "publicName": "memberBhv",
+          "typeName": "dev.mobile.local.dbflute.exbhv.MemberBhv",
+          "simpleTypeName": "MemberBhv",
+          "value": null,
+          "description": "The behavior of MEMBER.",
+          "comment": "The behavior of MEMBER.\n\u003cp\u003e\nYou can implement your original methods here.\nThis class remains when re-generating.\n\u003c/p\u003e\n\n@author DBFlute(AutoGenerator)",
+          "annotationList": [
+            "Resource"
+          ],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "methodName": "entity",
+      "methodComment": null,
+      "annotationList": [
+        "AllowAnyoneAccess",
+        "Execute"
+      ],
+      "parameterTypeDocMetaList": [
+        {
+          "name": "account",
+          "publicName": "account",
+          "typeName": "java.lang.String",
+          "simpleTypeName": "String",
+          "value": null,
+          "description": null,
+          "comment": null,
+          "annotationList": [],
+          "nestTypeDocMetaList": []
+        }
+      ],
+      "formTypeDocMeta": null,
+      "returnTypeDocMeta": {
+        "name": null,
+        "publicName": null,
+        "typeName": "org.lastaflute.web.response.JsonResponse\u003cjava.lang.Void\u003e",
+        "simpleTypeName": "JsonResponse\u003cVoid\u003e",
+        "value": "JsonResponse.asEmptyBody()",
+        "description": null,
+        "comment": null,
+        "annotationList": [],
+        "nestTypeDocMetaList": []
+      },
+      "fileLineCount": 35,
+      "methodLineCount": 4
+    }
+  ]
+}

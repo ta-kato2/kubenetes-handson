@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//DBFLUTE//DTD LastaDi 1.0//EN"
+	"http://dbflute.org/meta/lastadi10.dtd">
+<components namespace="dbflute">
+	<include condition="#exists('#path')" path="my_included_dbflute.xml"/>
+	<include path="rdb.xml"/>
+
+	<!-- The components of DBFlute Runtime. -->
+	<component name="introduction" class="dev.mobile.local.dbflute.allcommon.DBFluteInitializer"/>
+	<component name="invokerAssistant" class="dev.mobile.local.dbflute.allcommon.ImplementedInvokerAssistant"/>
+	<component name="behaviorCommandInvoker" class="org.dbflute.bhv.core.BehaviorCommandInvoker"/>
+	<component name="behaviorSelector" class="dev.mobile.local.dbflute.allcommon.ImplementedBehaviorSelector"/>
+	<component name="commonColumnAutoSetupper" class="dev.mobile.local.dbflute.allcommon.ImplementedCommonColumnAutoSetupper"/>
+
+	<!-- The components of Behavior. -->
+	<component name="memberBhv" class="dev.mobile.local.dbflute.exbhv.MemberBhv"/>
+</components>

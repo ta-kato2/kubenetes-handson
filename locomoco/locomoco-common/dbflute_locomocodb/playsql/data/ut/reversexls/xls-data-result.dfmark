@@ -1,0 +1,10 @@
+
+* * * * * * * * * *
+*                 *
+* Xls Data Result *
+*                 *
+* * * * * * * * * *
+data-directory: playsql/data/ut/reversexls
+
+[cyclic-data-01-MEMBER-plus.xls]
+  MEMBER (20)

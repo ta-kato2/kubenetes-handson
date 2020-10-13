@@ -1,0 +1,18 @@
+# common
+.DS_Store
+
+# IntelliJ IDEA
+**/.idea/*
+!**/.idea/codeStyles
+!**/.idea/inspectionProfiles
+!**/.idea/encodings.xml
+!**/.idea/misc.xml
+!**/.idea/saveactions_settings.xml
+**/*.iml
+/out
+
+/target
+/build
+/bin
+/*.png
+/dbflute-intro.*

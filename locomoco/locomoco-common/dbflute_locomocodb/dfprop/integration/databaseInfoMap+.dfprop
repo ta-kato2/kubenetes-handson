@@ -1,0 +1,6 @@
+map:{
+    ; url = jdbc:mysql://localhost:3306/locomocodb
+	; schema =
+    ; user = locomocodb
+    ; password = locomocodb
+}

@@ -1,0 +1,11 @@
+ext {
+  name = 'locomoco'
+}
+
+def subproject(subname) {
+  "${name}-${subname}"
+}
+
+rootProject.name = subproject('base')
+rootProject.projectDir = new File(settingsDir, rootProject.name)
+includeFlat subproject('common'), subproject('song'), subproject('dance') 

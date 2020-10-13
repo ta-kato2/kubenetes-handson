@@ -1,0 +1,96 @@
+allprojects {
+    group = "${group}"
+    version = "${version}"
+
+    repositories {
+        jcenter()
+        mavenCentral()
+        mavenLocal()
+    }
+
+    // task wrapper(type: Wrapper) { gradleVersion = buildGradleVersion }
+}
+
+subprojects {
+    if (project.name.endsWith('frontend')) {
+        return
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'groovy'
+
+    tasks.withType(AbstractCompile) {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+        options.encoding = 'UTF-8'
+    }
+
+    def projectName = (rootProject.name - '-base')
+    if (project.name == "${projectName}-common") {
+        dependencies {
+ 			compile "javax.annotation:javax.annotation-api:${javaxAnnotationVersion}"
+            
+            // Main Framework
+            compile "org.dbflute:dbflute-runtime:${dbfluteVersion}"
+            runtime "mysql:mysql-connector-java:${mysqlVersion}"
+            compile "org.lastaflute:lastaflute:${lastaVersion}"
+
+            // Partner Library
+            compile "org.slf4j:slf4j-api:${slf4jVersion}"
+            runtime "ch.qos.logback:logback-classic:${logbackVersion}"
+            compile "javax.servlet:javax.servlet-api:${javaxServletVersion}"
+            compile "javax.transaction:javax.transaction-api:${javaxTransactionVersion}"
+            testCompile "org.dbflute.tomcat:tomcat-boot:${tomcatBootVersion}"
+
+            // GoodNeighbor Library
+            compile "org.apache.commons:commons-lang3:${commonsLang3Version}"
+            compile "org.eclipse.collections:eclipse-collections:${eclipseCollectionsVersion}"
+
+            // Testing
+            testCompile "junit:junit:${junitVersion}"
+            testCompile "org.dbflute.utflute:utflute-lastaflute:${utfluteVersion}"
+            testCompile "org.assertj:assertj-core:${assertjVersion}"
+            testCompile "org.codehaus.groovy:groovy-all:${groovyVersion}"
+        }
+    } else {
+        apply plugin: 'war'
+        apply plugin: 'application'
+
+        // Web common Library
+        dependencies {
+            compile "org.dbflute.tomcat:tomcat-boot:${tomcatBootVersion}"
+
+            // My Project
+            compile project(":${projectName}-common")
+        }
+
+        tasks.withType(Jar) {
+            version = ''
+        }
+
+        afterEvaluate { project ->
+        	mainClassName = "dev.mobile.local.${(project.name - (rootProject.name - 'base')).capitalize()}Boot"
+            project.war {
+                def embeddedArtifactList = ['javax.servlet-api', 'tomcat-boot', 'tomcat-embed-core', 'tomcat-el-api', 'tomcat-jasper-el']
+                project.configurations.compile.collect { file ->
+                    if (embeddedArtifactList.any { file.getName().startsWith(it) }) {
+                        from {
+                            file.isDirectory() ? file : zipTree(file)
+                        }
+                    }
+                }
+                rootSpec.exclude(embeddedArtifactList.collect { "**/${it}-*.jar" })
+                from fileTree(dir: new File(project.buildDir, 'classes/java/main/'), includes: ["${mainClassName.replace('.', '/')}.class"])
+                from fileTree(dir: new File(project.buildDir, 'resources/main/'), includes: ['*_config.properties', '*_env*.properties'])
+                from fileTree(dir: project.file("../${projectName}-common/src/main/resources"), includes: ['*_config.properties', '*_env*.properties'])
+                into('WEB-INF/classes') {
+                    from fileTree(dir: new File(project.buildDir, 'lastadoc/'), includes: ['swagger.json'])
+                }
+
+                manifest {
+                    attributes 'Main-Class': mainClassName
+                }
+            }
+        }
+    }
+}
