@@ -60,6 +60,85 @@ minikube addons enable registry
 minikube dashboard
 ```
 
+## Harborをローカルに作成する
+
+harbor用のネームスペースを作成する。
+```
+kubectl apply -f k8s/harbor/namespace.yml
+```
+
+ネームスペースを切り替える
+```
+kubectl config set-context minikube --namespace=local-harbor
+kubectl config get-contexts
+```
+
+
+PODを確認する。
+```
+kubectl get node -o wide
+```
+
+上記で確認したInternal-IPを、以下のコマンドに埋め込んで実行する
+
+```
+helm install harbor --namespace local-harbor harbor/harbor \
+  --set expose.type=nodePort \
+  --set expose.tls.enabled=false \
+  --set persistence.enabled=true \
+  --set externalURL=http://[Internal-IP]:30002 \
+  --set harborAdminPassword=Password1!
+```
+
+harbor用のpodたちが起動するまで数分待つ。
+
+外からアクセスできるようにIngressを追加する
+```
+kubectl apply -f k8s/harbor/ingress.yml
+```
+
+minikubeのクラスタのIPアドレスを確認する。
+```
+minikube ip
+```
+
+local.harbor.devドメインで、harborにアクセスできるようにするために、hostsファイルを修正する。
+
+```
+sudo vi /etc/hosts
+```
+
+以下を追記
+```
+minikubeのIPアドレス local.harbor.dev
+```
+
+http://local.harbor.dev
+
+でharborにアクセス可能。
+chromeだと勝手にhttpsになってしまってエラーになるかも。
+
+
+### HarborにアプリのDokcer ImageをPUSHする
+以下をJSONの項目に追記して、Docker For Macを再起動する。これをやると、指定したリポジトリはHTTPSじゃなくHTTPでも通るようになる。
+
+```
+vi ~/.docker/daemon.json
+```
+```
+  "insecure-registries":["local.harbor.dev:80"]
+```
+
+Harborにログインして、イメージをPUSH
+```
+ docker login local.harbor.dev:80 --username admin
+ docker push local.harbor.dev:80/mobile/locomoco-song:latest
+```
+
+
+
+
+
 ## ハンズオン用に新しくネームスペースを作成する
 
 
@@ -270,56 +349,6 @@ kubectl apply -f k8s/app/song/ingress.yml
 ホストPCからアクセスして、通信ができることを確認する。
 
 ※google chromeでアクセスすると、勝手にhttpsに書き換えられて、うまくアクセスできないかもしれない。
-
-
----
-kubectl apply -f k8s/harbor/namespace.yml
-kubectl config set-context minikube --namespace=local-harbor
-kubectl config get-contexts
-
-kubectl get node -o wide
-
-上記で確認したInternal-IPを、以下のコマンドに埋め込んで実行する
-
-helm install harbor --namespace local-harbor harbor/harbor \
-  --set expose.type=nodePort \
-  --set expose.tls.enabled=false \
-  --set persistence.enabled=true \
-  --set externalURL=http://[Internal-IP]:30002 \
-  --set harborAdminPassword=Password1!
-
-kubectl get pods
-
-harbor用のpodたちが起動するまで数分待つ。
-
-外からアクセスできるようにする
-kubectl apply -f k8s/harbor/ingress.yml
-
-minikube ip
-
-sudo vi /etc/hosts
-以下を追記
-```
-minikubeのIPアドレス local.harbor.dev
-```
-
-http://local.harbor.dev
-
-でharborにアクセス可能。
-chromeだと勝手にhttpsになってしまってエラーになるかも。
-
-
-
- docker login local.harbor.dev:80 --username admin
- docker push local.harbor.dev:80/mobile/locomoco-song:latest
-
-以下をJSONの項目に追記して、Docker For Macを再起動する。これをやると、指定したリポジトリはHTTPSじゃなくHTTPでも通るようになる。
-vi ~/.docker/daemon.json
-  "insecure-registries":["local.harbor.dev:80"]
-
-
-
-
 
 
 ### Self Hosted Runner用のpodを作成してみる
