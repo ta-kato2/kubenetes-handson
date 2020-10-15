@@ -32,4 +32,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: ./docker/song/build-app.sh
+        run: |
+          cd ../../app/locomoco/locomoco-base
+          ./gradlew test
