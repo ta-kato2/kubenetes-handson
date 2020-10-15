@@ -322,27 +322,95 @@ vi ~/.docker/daemon.json
 
 
 
-### self
+### Self Hosted Runner用のpodを作成してみる
 
-kubectl apply -f k8s/harbor/namespace.yml
+まずは、Self Hosted Runnerのpodを管理するためのネームスペースを新規作成
+
+```
+kubectl apply -f k8s/self-hosted-runner/namespace.yml
+```
+
+コンテキストを切り替える。
+```
 kubectl config set-context minikube --namespace=local-self-hosted-runner
 kubectl config get-contexts
+```
 
+Deploymentを作成して、Podを起動させる。
+```
+kubectl apply -f k8s/self-hosted-runner/namespace.yml
+```
+
+起動したpodを確認する。
+```
 kubectl get pods
+```
 
-kubectl exec -it xxx -- bash
+現状だとただのubuntuのpodが起動しているだけなので、ここにself-hosted-runnerとして使えるようにインストールする。
 
+まずはpodにログインする。
+
+```
+kubectl exec -it [PODのID] -- bash
+```
+
+curlをインストール
+```
 apt update && apt install curl --yes
+```
+
+ユーザーを１つ追加する
+```
 useradd runner -m && echo runner:secret | chpasswd
+```
+
+追加したユーザーに切り替える。
+```
 su -l runner
+```
+
+作業用ディレクトリを作成して移動する。
+```
 mkdir actions-runner && cd actions-runner
+```
+
+Linux向けのSelfHostedRunnerプログラムをダウンロードする。
+```
 curl -O -L https://github.com/actions/runner/releases/download/v2.273.5/actions-runner-linux-x64-2.273.5.tar.gz
+```
+
+ダウンロードしたファイルを解凍する。
+```
 tar xzf ./actions-runner-linux-x64-2.273.5.tar.gz
+```
 
+次の作業はrootユーザーしかできないので、一旦rootユーザーに戻す。
+```
 exit
+```
+
+必要なライブラリをインストールする
+```
 /home/runner/actions-runner/bin/installdependencies.sh
+```
 
+再度追加ユーザーへ切り替える
+```
 su -l runner
+```
 
+GithubへSelfHostedRunnerとして登録する。
+トークンは、Githubの設定ページに記載されている。
+
+```
 ./actions-runner/config.sh --url https://github.com/ta-kato2/kubenetes-handson --token xxxxxx
+```
+
+Self Hotsted Runnerとして起動する。
+※これ、なぜか２回やらないと反映されないかも。
+```
 ./actions-runner/run.sh
+```
+
+Githubの設定で、Self Hotsted Runnerがidle状態で起動していれば成功。
+
