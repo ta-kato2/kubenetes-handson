@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: local-self-hosted-runner-deployment
+  namespace: local-self-hosted-runner
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: local-self-hosted-runner-pod
+  template:
+    metadata:
+      labels:
+        component: local-self-hosted-runner-pod
+    spec:
+      containers:
+      - name: local-self-hosted-runner-container
+        image: ubuntu:latest
+        command: ["sleep", "infinity"]

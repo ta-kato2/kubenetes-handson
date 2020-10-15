@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: local-self-hosted-runner
+  labels:
+    name: local-self-hosted-runner

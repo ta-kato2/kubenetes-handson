@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: local-self-hosted-runner-pod
+  namespace: local-self-hosted-runner
+spec:
+  containers:
+  - name: local-self-hosted-runner-container
+    image: ubuntu:latest
+    command: ["sleep", "infinity"]
