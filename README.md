@@ -319,3 +319,30 @@ vi ~/.docker/daemon.json
 
 
 
+
+
+
+### self
+
+kubectl apply -f k8s/harbor/namespace.yml
+kubectl config set-context minikube --namespace=local-self-hosted-runner
+kubectl config get-contexts
+
+kubectl get pods
+
+kubectl exec -it xxx -- bash
+
+apt update && apt install curl --yes
+useradd runner -m && echo runner:secret | chpasswd
+su -l runner
+mkdir actions-runner && cd actions-runner
+curl -O -L https://github.com/actions/runner/releases/download/v2.273.5/actions-runner-linux-x64-2.273.5.tar.gz
+tar xzf ./actions-runner-linux-x64-2.273.5.tar.gz
+
+exit
+/home/runner/actions-runner/bin/installdependencies.sh
+
+su -l runner
+
+./actions-runner/config.sh --url https://github.com/ta-kato2/kubenetes-handson --token xxxxxx
+./actions-runner/run.sh
